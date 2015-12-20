@@ -17,14 +17,75 @@ var bio = {
 	"bioPic" : "images/TBHF_Photo.jpg"
 };
 
+// education JSON
+var education = {
+  "schools" : [
+    {
+      "name" : "Central Bible College",
+      "city" : "Springfield, MO, US",
+      "degrees" : ["B.A.", "A.A."],
+      "majors" : ["Youth Minestry/Bible", "Deaf Minestry"],
+      "datesAttended" : "1997 - 2007"
+    },
+    {
+      "name" : "Ozarks Technical Community College",
+      "city" : "Springfield, MO, US",
+      "degrees" : ["A.A.S.", "Certificate"],
+      "majors" : ["Business and Marketing", "Computer Information Technology"],
+      "datesAttended" : "2005 - 2009"
+    },
+    {
+      "name" : "St. Phillips College",
+      "city" : "San Antonio, TX, US",
+      "degrees" : ["A.S."],
+      "majors" : ["Computer Science", "Mathematics"],
+      "datesAttended" : "2014 - Present"
+    },
+    {
+      "name" : "Texas A&M San Antonio",
+      "city" : "San Antonio, TX, US",
+      "degrees" : ["B.S."],
+      "majors" : ["Computer Science", "Mathematics"],
+      "datesAttended" : "2015 - Present"
+    }
+  ],
+
+  "onlineCourses" : [
+    {
+      "title": "Intro to HTML and CSS",
+      "school": "Udacity",
+      "dates": "Dec 2015",
+      "url": "https://www.udacity.com/course/intro-to-html-and-css--ud304"
+    },
+    {
+      "title": "Responsive Web Ddsign Fundamentals",
+      "school": "Udacity",
+      "dates": "Dec 2015",
+      "url": "https://www.udacity.com/course/responsive-web-design-fundamentals--ud893"
+    },
+    {
+      "title": "Responsive Images",
+      "school": "Udacity",
+      "dates": "Dec 2015",
+      "url": "https://www.udacity.com/course/responsive-images--ud882"
+    },
+    {
+      "title": "Javascript Basics",
+      "school": "Udacity",
+      "dates": "Dec 2015",
+      "url": "https://www.udacity.com/course/javascript-basics--ud804"
+    }
+  ]
+};
+
 // projects JSON
 var projects = {
-  "projects" : [
+  "project" : [
     {
-      "title" : "[project title]",
-      "dates" : "[project dates]",
-      "description" : "[project description]",
-      "images" : "[project images]"
+      "title" : "[project 1 title]",
+      "dates" : "[project 1 dates]",
+      "description" : "[project 1 description]",
+      "images" : "http://placekitten.com/200/300"
     }
   ]
 };
@@ -56,67 +117,6 @@ var work = {
   ]
 };
 
-// education JSON
-var education = {
-  "schools" : [
-		{
-			"name" : "Central Bible College",
-			"city" : "Springfield, MO, US",
-			"degrees" : ["B.A.", "A.A."],
-			"majors" : ["Youth Minestry/Bible", "Deaf Minestry"],
-			"datesAttended" : "1997 - 2007"
-		},
-		{
-			"name" : "Ozarks Technical Community College",
-			"city" : "Springfield, MO, US",
-			"degrees" : ["A.A.S.", "Certificate"],
-			"majors" : ["Business and Marketing", "Computer Information Technology"],
-			"datesAttended" : "2005 - 2009"
-		},
-		{
-			"name" : "St. Phillips College",
-			"city" : "San Antonio, TX, US",
-			"degrees" : ["A.S."],
-			"majors" : ["Computer Science", "Mathematics"],
-			"datesAttended" : "2014 - Present"
-		},
-		{
-			"name" : "Texas A&M San Antonio",
-			"city" : "San Antonio, TX, US",
-			"degrees" : ["B.S."],
-			"majors" : ["Computer Science", "Mathematics"],
-			"datesAttended" : "2015 - Present"
-		}
-	],
-
-  "onlineCourses" : [
-    {
-      "title": "Intro to HTML and CSS",
-      "school": "Udacity",
-      "dates": "Dec 2015",
-      "url": "https://www.udacity.com/course/intro-to-html-and-css--ud304"
-    },
-    {
-      "title": "Responsive Web Ddsign Fundamentals",
-      "school": "Udacity",
-      "dates": "Dec 2015",
-      "url": "https://www.udacity.com/course/responsive-web-design-fundamentals--ud893"
-    },
-    {
-      "title": "Responsive Images",
-      "school": "Udacity",
-      "dates": "Dec 2015",
-      "url": "https://www.udacity.com/course/responsive-images--ud882"
-    },
-    {
-      "title": "Javascript Basics",
-      "school": "Udacity",
-      "dates": "Dec 2015",
-      "url": "https://www.udacity.com/course/javascript-basics--ud804"
-    }
-  ]
-};
-
 // MAIN CODE BLOCK
 
 
@@ -134,6 +134,7 @@ $("#main").append(internationalizeButton);
 // display each of the sections of the resume
 displayWork();
 displayHeader();
+displayProjects();
 
 // FUNCTION DEFINITIONS
 
@@ -167,6 +168,23 @@ function displayWork() {
       HTMLworkDescription.replace("%data%", work.jobs[i].description)
     );
   };
+}
+
+// this function displays the data contained in the project JSON
+function displayProjects() {
+  for (var i in projects.project) {
+    $("#projects").append(HTMLprojectStart);
+    $(".project-entry:last").append(
+      HTMLprojectTitle.replace("%data%", projects.project[i].title),
+      HTMLprojectDates.replace("%data%", projects.project[i].dates),
+      HTMLprojectDescription.replace("%data%", projects.project[i].description),
+      HTMLprojectImage.replace("%data%", projects.project[i].images)
+    );
+  };
+}
+
+function displayEducation() {
+
 }
 
 // this function internationalizes the name
