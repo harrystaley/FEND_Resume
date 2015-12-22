@@ -75,11 +75,17 @@ var education = {
       "school": "Udacity",
       "dates": "Dec 2015",
       "url": "https://www.udacity.com/course/javascript-basics--ud804"
+    },
+    {
+      "title": "Intro to JQUERY",
+      "school": "Udacity",
+      "dates": "Dec 2015",
+      "url": "https://www.udacity.com/course/intro-to-jquery--ud245"
     }
   ]
 };
 
-// TODO: fill out project information and add image
+// TODO: fill out project information and add images
 
 // projects JSON
 var projects = {
@@ -131,6 +137,7 @@ displayHeader();
 displayProjects();
 displayMap();
 displayEducation();
+displayFooter();
 
 // add a google map to my resume
 
@@ -196,6 +203,7 @@ function displayProjects() {
 
 // this function displays the data contained in the educaiton JSON
 function displayEducation() {
+  // append schools to resume
   for (var i in education.schools) {
     $("#education").append(HTMLschoolStart);
     $(".education-entry:last").append(
@@ -206,11 +214,33 @@ function displayEducation() {
       HTMLschoolMajor.replace("%data%", education.schools[i].majors)
     );
   };
+
+  // add online classes section
+  $(".education-entry:last").append(HTMLonlineClasses);
+
+  // append online classes to resume
+  for (var i in education.onlineCourses) {
+    $(".education-entry:last").append(
+      HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title),
+      HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school),
+      HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates),
+      HTMLonlineURL.replace("%data%", education.onlineCourses[i].url)
+    );
+  };
 }
 
 // this function calls the googleMaps API based upon the data contained in the location attributes in all JSONS
 function displayMap() {
   $("#mapDiv").append(googleMap);
+}
+
+function displayFooter() {
+  // adds the contact list to the header
+  $("#footerContacts").append(
+    HTMLmobile.replace("%data%", bio.contacts.mobile),
+    HTMLemail.replace("%data%", bio.contacts.email),
+    HTMLgithub.replace("%data%", bio.contacts.github)
+  );
 }
 
 // this function internationalizes the name
