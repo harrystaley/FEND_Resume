@@ -7,10 +7,11 @@
 var bio = {
 	"name" : "Harry Staley",
 	"role" : "Web Developer and Data Analyst",
-	"contactMe" : {
+	"contacts" : {
 		"mobile" : "330-718-1876",
 		"email" : "staleyh@gmail.com",
-		"github" : "maogm316"
+		"github" : "maogm316",
+    "location" : "San Antonio, TX"
 	},
   "welcomeMessage" : "Welcome to my online resume.",
 	"skills" : ["VBA", "HTML 5", "CSS 3", "Computer Programming", "Basic Command LIne Linux", "SAP Web Intelligence", "Advanced Excel"],
@@ -22,31 +23,31 @@ var education = {
   "schools" : [
     {
       "name" : "Central Bible College",
-      "city" : "Springfield, MO, US",
-      "degrees" : ["B.A.", "A.A."],
-      "majors" : ["Youth Minestry/Bible", "Deaf Minestry"],
-      "datesAttended" : "1997 - 2007"
+      "location" : "Springfield, MO",
+      "degrees" : "B.A., A.A.",
+      "majors" : "Youth Minestry/Bible, Deaf Minestry",
+      "dates" : "1997 - 2007"
     },
     {
       "name" : "Ozarks Technical Community College",
-      "city" : "Springfield, MO, US",
-      "degrees" : ["A.A.S.", "Certificate"],
-      "majors" : ["Business and Marketing", "Computer Information Technology"],
-      "datesAttended" : "2005 - 2009"
+      "location" : "Springfield, MO",
+      "degrees" : "A.A.S., Certificate",
+      "majors" : "Business and Marketing, Computer Information Technology",
+      "dates" : "2005 - 2009"
     },
     {
       "name" : "St. Phillips College",
-      "city" : "San Antonio, TX, US",
-      "degrees" : ["A.S."],
+      "location" : "San Antonio, TX",
+      "degrees" : "A.S.",
       "majors" : ["Computer Science", "Mathematics"],
-      "datesAttended" : "2014 - Present"
+      "dates" : "2014 - Present"
     },
     {
       "name" : "Texas A&M San Antonio",
-      "city" : "San Antonio, TX, US",
-      "degrees" : ["B.S."],
-      "majors" : ["Computer Science", "Mathematics"],
-      "datesAttended" : "2015 - Present"
+      "location" : "San Antonio, TX",
+      "degrees" : "B.S.",
+      "majors" : "Computer Science, Mathematics",
+      "dates" : "2015 - Present"
     }
   ],
 
@@ -78,6 +79,8 @@ var education = {
   ]
 };
 
+// TODO: fill out project information and add image
+
 // projects JSON
 var projects = {
   "project" : [
@@ -85,7 +88,7 @@ var projects = {
       "title" : "[project 1 title]",
       "dates" : "[project 1 dates]",
       "description" : "[project 1 description]",
-      "images" : "http://placekitten.com/200/300"
+      "images" : "https://placekitten.com/200/200?image=1"
     }
   ]
 };
@@ -96,21 +99,21 @@ var work = {
     {
       "position" : "Procurement Systems Analyst",
       "employer" : "U.S. Army: MIssion and Installation Contracting Command",
-      "location" : "San Antonio, TX, US",
+      "location" : "Fort Sam Houston, TX",
       "dates" : "2011 - Present",
       "description" : "Anylize data in multiple forms as well as work on software projects on an as needed basis."
     },
     {
       "position" : "Data Analyst",
       "employer" : "Scholastic Inc.",
-      "location" : "Telework",
+      "location" : "New York, NY",
       "dates" : "2009 - 2011",
       "description" : "Anylize data in multiple forms as well as work on software projects on an as needed basis."
     },
     {
       "position" : "Laptop Support Technician",
       "employer" : "Teletech",
-      "location" : "Springfield, MO, US",
+      "location" : "Springfield, MO",
       "dates" : "2008 - 2009",
       "description" : "Suport HP customers with laptop suport issues while selling products to aleviate future issues."
     }
@@ -119,15 +122,6 @@ var work = {
 
 // MAIN CODE BLOCK
 
-
-
-// returns the location of a mouse click to the console.
-$(document).click(function(loc) {
-  var x = loc.pageX;
-  var y = loc.pageY;
-  logClicks(x,y);
-});
-
 // add a button to execute the internationalize function on the main page
 $("#main").append(internationalizeButton);
 
@@ -135,15 +129,22 @@ $("#main").append(internationalizeButton);
 displayWork();
 displayHeader();
 displayProjects();
+displayMap();
+displayEducation();
+
+// add a google map to my resume
+
 
 // FUNCTION DEFINITIONS
 
+// this funciton displays the header of the page
 function displayHeader() {
   if (bio !== null) { 
     // add all of the main items to the header
     $("#header").append(
-      HTMLheaderName.replace("%data%", bio.name)+
-      HTMLheaderRole.replace("%data%", bio.role)+
+      HTMLheaderName.replace("%data%", bio.name),
+      HTMLheaderRole.replace("%data%", bio.role),
+      HTMLbioPic.replace("%data%", bio.bioPic),
       HTMLskillsStart
     );
 
@@ -153,6 +154,14 @@ function displayHeader() {
         HTMLskills.replace("%data%", bio.skills[i])
       );
     };
+
+    // adds the contact list to the header
+    $("#topContacts").append(
+      HTMLmobile.replace("%data%", bio.contacts.mobile),
+      HTMLemail.replace("%data%", bio.contacts.email),
+      HTMLgithub.replace("%data%", bio.contacts.github),
+      HTMLworkLocation.replace("%data%", bio.contacts.location)
+    );
   }
 }
 
@@ -179,12 +188,29 @@ function displayProjects() {
       HTMLprojectDates.replace("%data%", projects.project[i].dates),
       HTMLprojectDescription.replace("%data%", projects.project[i].description),
       HTMLprojectImage.replace("%data%", projects.project[i].images)
+    )
+  };
+}
+
+// TODO: add projects to my resume
+
+// this function displays the data contained in the educaiton JSON
+function displayEducation() {
+  for (var i in education.schools) {
+    $("#education").append(HTMLschoolStart);
+    $(".education-entry:last").append(
+      HTMLschoolName.replace("%data%", education.schools[i].name),
+      HTMLschoolDegree.replace("%data%", education.schools[i].degrees),
+      HTMLschoolDates.replace("%data%", education.schools[i].dates),
+      HTMLschoolLocation.replace("%data%", education.schools[i].location),
+      HTMLschoolMajor.replace("%data%", education.schools[i].majors)
     );
   };
 }
 
-function displayEducation() {
-
+// this function calls the googleMaps API based upon the data contained in the location attributes in all JSONS
+function displayMap() {
+  $("#mapDiv").append(googleMap);
 }
 
 // this function internationalizes the name
