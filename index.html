@@ -60,76 +60,60 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <div id="main" class="container">
       
       <!--
-      Everything from here to the <script> tag below is the skeleton of your
-      website. Your code will add information to each of the sections of the
-      resume below. You can pretty easily figure out what each section will
-      display by looking at the id or at what's written between the <h2> tags.
+      Everything from here to the <script> tag below is the skeleton of my resume website. The code contained in the file titled resumeBuilder.js adds information to each of the sections of the resume below. You can pretty easily figure out what each section will display by looking at the id or at what's written between the <h2> tags, but I have also commented on each section for your convenience
       -->
-      <div id="header" class="center-content clear-fix row">
-        <div id="profilePic" class="col-md-4"></div>
-        <div class="col-md-8">
-          <ul id="topContacts" class="flex-box"></ul>
+      <header>
+        <div id="header" class="center-content clear-fix row">
+          <div id="profilePic" class="col-md-4"></div>
+          <div class="col-md-8">
+            <ul id="topContacts" class="flex-box"></ul>
+          </div>
         </div>
-      </div>
+      </header>
 
-      <div style="clear: both;"></div>
-      <div id="workExperience" class="gray row">
-        <h2>Work Experience</h2>
-      </div>
-      <div id="projects" class="row">
-        <div class="col-md-12">
-          <h2>Projects</h2>
+      <main>
+        <!-- This section displays my work experience -->
+        <div style="clear: both;"></div>
+        <div id="workExperience" class="gray row">
+          <h2>Work Experience</h2>
         </div>
-      </div>
-      <div id="education" class="gray row">
-        <div class="col-md-12">
-          <h2>Education</h2>
+        
+        <!-- This section displays projects taht I have worked on -->
+        <div id="projects" class="row">
+          <div class="col-md-12">
+            <h2>Projects</h2>
+          </div>
         </div>
-      </div>
-      <div id="mapDiv" class="row">
-        <div class="col-md-12">
-          <h2>Where I've Lived and Worked</h2>
+
+        <!-- This section contains my education -->
+        <div id="education" class="gray row">
+          <div class="col-md-12">
+            <h2>Education</h2>
+          </div>
         </div>
-      </div>
-      <div id="lets-connect" class="dark-gray row">
-        <div class="col-md-12">
-          <h2 class="orange center-text">Let's Connect</h2>
-          <ul id="footerContacts" class="flex-box"></ul>
+
+        <!-- This is the section of the resume taht displays the google map. -->
+        <div id="mapDiv" class="row">
+          <div class="col-md-12">
+            <h2>Where I've Lived and Worked</h2>
+          </div>
         </div>
-      </div>
+      </main>
+      <footer>
+        <div id="lets-connect" class="dark-gray row">
+          <div class="col-md-12">
+            <h2 class="orange center-text">Let's Connect</h2>
+            <ul id="footerContacts" class="flex-box"></ul>
+          </div>
+        </div>
+      </footer>
     </div>
 
-    <!--
-    The next line tells the browser where to download the JavaScript file you'll be
-    writing. In resumeBuilder.js, you'll be writing code that builds the resume
-    dynamically when this website, index.html, is opened.
-    -->
+    <!-- This is the file where the resume information is stored in JSONS and where the functions to add the different page elements to be displayed. -->
     <script src="js/resumeBuilder.js"></script>
 
-
-    <!--
-    These scripts are written in JavaScript. You'll be breaking them down as part of
-    a quiz. Essentially, the next few lines are checking to see if you have not
-    changed each section of the resume. If you have not made any changes to a section
-    of the resume, then that part of the resume does not show up. More on this in the
-    course.
-    -->
-
+    <!-- The below java script hides each section of they are not filled with content. -->
     <script type="text/javascript">
-      // Notice how all of a sudden there's JavaScript inside this HTML
-      // document? You can write JavaScript between <script> tags. At the end of your
-      // JavaScript, don't forget the closing script tag with the slash (/).
-
-
-      // Also, this is a JavaScript style comment. You can comment in JavaScript with:
-
-      //   two slashes for all following characters on a single line, or
-
-      /*
-          an opening and closing set of slash asterisks for block comments.
-      */
-
-
       if(document.getElementsByClassName('flex-item').length === 0) {
         document.getElementById('topContacts').style.display = 'none';
       }

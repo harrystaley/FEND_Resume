@@ -193,9 +193,6 @@ span {
   .biopic {
     width: 150px;
   }
-  .welcome-message {
-    display: none;
-  }
 }
 
 #map {
@@ -210,7 +207,8 @@ span {
   padding-bottom: 5%;
 }
 
-@media only screen and (min-width: 750px) {
+
+@media only screen and (min-width: 0px) {
   #skills-h3,
   .biopic {
     display: block;
