@@ -24,9 +24,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <!-- Tells the browser what the title of this page should be. -->
     <title>The Resume of Harry Staley</title>
 
-    <!--  -->
+    <!-- Load the boot strap framework stylesheet -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    
+
     <!-- Load the page styles. -->
     <link href="css/style.css" rel="stylesheet">
 
@@ -43,7 +43,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     the DOM. jQuery is fast and easy to use, but it doesn't do anything
     you can't accomplish with vanilla (regular) JavaScript.
     -->
-    <script src="js/jQuery.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
 
     <!-- More on helper.js in the class -->
     <script src="js/helper.js"></script>
@@ -57,7 +57,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div id="main">
+    <div id="main" class="container">
       
       <!--
       Everything from here to the <script> tag below is the skeleton of your
@@ -65,27 +65,37 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       resume below. You can pretty easily figure out what each section will
       display by looking at the id or at what's written between the <h2> tags.
       -->
-      <div id="header" class="center-content clear-fix">
-        <div id="profilePic"></div>
-        <ul id="topContacts" class="flex-box"></ul>
+      <div id="header" class="center-content clear-fix row">
+        <div id="profilePic" class="col-md-4"></div>
+        <div class="col-md-8">
+          <ul id="topContacts" class="flex-box"></ul>
+        </div>
       </div>
+
       <div style="clear: both;"></div>
-      <div id="workExperience" class="gray">
+      <div id="workExperience" class="gray row">
         <h2>Work Experience</h2>
       </div>
-      <div id="projects">
-        <h2>Projects</h2>
+      <div id="projects" class="row">
+        <div class="col-md-12">
+          <h2>Projects</h2>
+        </div>
       </div>
-      <div id="education" class="gray">
-        <h2>Education</h2>
+      <div id="education" class="gray row">
+        <div class="col-md-12">
+          <h2>Education</h2>
+        </div>
       </div>
-      <div id="mapDiv">
-        <h2>Where I've Lived and Worked</h2>
+      <div id="mapDiv" class="row">
+        <div class="col-md-12">
+          <h2>Where I've Lived and Worked</h2>
+        </div>
       </div>
-      <div id="lets-connect" class="dark-gray">
-        <h2 class="orange center-text">Let's Connect</h2>
-          <ul id="footerContacts" class="flex-box">
-        </ul>
+      <div id="lets-connect" class="dark-gray row">
+        <div class="col-md-12">
+          <h2 class="orange center-text">Let's Connect</h2>
+          <ul id="footerContacts" class="flex-box"></ul>
+        </div>
       </div>
     </div>
 
