@@ -152,6 +152,7 @@ function displayHeader() {
       HTMLheaderName.replace("%data%", bio.name),
       HTMLheaderRole.replace("%data%", bio.role),
       HTMLbioPic.replace("%data%", bio.bioPic),
+      HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage),
       HTMLskillsStart
     );
 

@@ -1,21 +1,4 @@
 <!DOCTYPE html>
-
-
-
-<!--
-This is an HTML document. It contains information about how elements in the website
-are arranged. In other words, it describes the layout of a website.
-
-I can't wait to see the resumes you put together!
-
-Cameron Pittman, Udacity Course Developer
--->
-
-<!--
-The <head> of a website generally links to important resources the page will
-need to load. You'll see a lot of <link>s to CSS files for styles and
-<scripts> for JavaScript files to build interactions.
--->
 <html lang="en">
   <head>
     <!-- This tells the browser how to read the document. -->
@@ -29,6 +12,76 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
     <!-- Load the page styles. -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- stylesheet for a few google fonts. -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700">
+  
+    <!-- normalize CSS pixels with device pixels for scalability -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="main" class="container">
+      
+      <!--
+      Everything from here to the <script> tag below is the skeleton of my resume website. The code contained in the file titled resumeBuilder.js adds information to each of the sections of the resume below. You can pretty easily figure out what each section will display by looking at the id or at what's written between the <h2> tags, but I have also commented on each section for your convenience
+      -->
+      <header>
+        <div id="header" class="center-content clear-fix dark-blue row">
+          <div id="profilePic" class="col-md-4">
+            
+          </div>
+          <div class="col-md-8">
+            <ul id="topContacts" class="flex-box"></ul>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- This section displays my work experience -->
+        <div style="clear: both;"></div>
+        <div id="workExperience" class="gray row">
+          <div class="col-md-12">
+            <h2>Work Experience</h2>
+          </div>
+        </div>
+        <div class="row">
+          <!-- This section displays projects taht I have worked on -->
+          <div id="projects" class="col-md-12">
+            <h2>Projects</h2>
+          </div>
+        </div>
+        <div class="row">
+          <!-- This section contains my education -->
+          <div id="education" class="gray col-md-12">
+            <h2>Education</h2>
+          </div>
+        </div>
+
+        <!-- This is the section of the resume taht displays the google map. -->
+        <div class="row">
+          <div id="mapDiv" class="col-md-12">
+            <div>
+              <h2>Where I've Lived and Worked</h2>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="row">
+          <div id="lets-connect" class="dark-blue col-md-12">
+            <h2 class="orange center-text">Let's Connect</h2>
+            <ul id="footerContacts" class="flex-box"></ul>
+            <!-- CSS Validated -->
+            <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+              <img class="w3cValid" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+            </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
 
     <!--
     jQuery is a common JavaScript library for reading and making changes to the
@@ -52,62 +105,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     Uncomment the <script> tag below when you're ready to add an interactive
     Google Map to your resume!
     -->
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <div id="main" class="container">
-      
-      <!--
-      Everything from here to the <script> tag below is the skeleton of my resume website. The code contained in the file titled resumeBuilder.js adds information to each of the sections of the resume below. You can pretty easily figure out what each section will display by looking at the id or at what's written between the <h2> tags, but I have also commented on each section for your convenience
-      -->
-      <header>
-        <div id="header" class="center-content clear-fix row">
-          <div id="profilePic" class="col-md-4"></div>
-          <div class="col-md-8">
-            <ul id="topContacts" class="flex-box"></ul>
-          </div>
-        </div>
-      </header>
-
-      <main>
-        <!-- This section displays my work experience -->
-        <div style="clear: both;"></div>
-        <div id="workExperience" class="gray row">
-          <h2>Work Experience</h2>
-        </div>
-        
-        <!-- This section displays projects taht I have worked on -->
-        <div id="projects" class="row">
-          <div class="col-md-12">
-            <h2>Projects</h2>
-          </div>
-        </div>
-
-        <!-- This section contains my education -->
-        <div id="education" class="gray row">
-          <div class="col-md-12">
-            <h2>Education</h2>
-          </div>
-        </div>
-
-        <!-- This is the section of the resume taht displays the google map. -->
-        <div id="mapDiv" class="row">
-          <div class="col-md-12">
-            <h2>Where I've Lived and Worked</h2>
-          </div>
-        </div>
-      </main>
-      <footer>
-        <div id="lets-connect" class="dark-gray row">
-          <div class="col-md-12">
-            <h2 class="orange center-text">Let's Connect</h2>
-            <ul id="footerContacts" class="flex-box"></ul>
-          </div>
-        </div>
-      </footer>
-    </div>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
     <!-- This is the file where the resume information is stored in JSONS and where the functions to add the different page elements to be displayed. -->
     <script src="js/resumeBuilder.js"></script>
