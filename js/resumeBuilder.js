@@ -11,7 +11,8 @@ var bio = {
 		"mobile" : "330-718-1876",
 		"email" : "staleyh@gmail.com",
 		"github" : "maogm316",
-    "location" : "San Antonio, TX"
+    "location" : "San Antonio, TX",
+    "LinkedIn" : "harrystaley"
 	},
   "welcomeMessage" : "Welcome to my online resume.",
 	"skills" : ["VBA", "HTML 5", "CSS 3", "Computer Programming", "Basic Command LIne Linux", "SAP Web Intelligence", "Advanced Excel"],
@@ -168,6 +169,7 @@ function displayHeader() {
       HTMLmobile.replace("%data%", bio.contacts.mobile),
       HTMLemail.replace("%data%", bio.contacts.email),
       HTMLgithub.replace("%data%", bio.contacts.github),
+      HTMLlinkedIn.replace("%data%", bio.contacts.LinkedIn),
       HTMLworkLocation.replace("%data%", bio.contacts.location)
     );
   }
