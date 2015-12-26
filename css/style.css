@@ -1,7 +1,5 @@
 /* custom CSS created by Harry Staley for Project 2 of Udacity Nanodeegree */
 
-/* TODO: add custom CSS to this project possibly bootstrap framework */
-
 body,
 div,
 ul,
@@ -135,8 +133,6 @@ a {
   background-color: #294860;
 }
 
-/* TODO: Replace with image later */
-
 .flex-box {
   display: -webkit-flex;
   display: flex;
@@ -189,7 +185,8 @@ span {
 }
 
 @media only screen and (max-width:900px) {
-  .biopic {
+  .biopic,
+  img {
     width: 175px;
   }
 }
@@ -198,7 +195,8 @@ span {
   #lets-connect {
     margin-top: 10%;
   }
-  .biopic {
+  .biopic,
+  img {
     width: 150px;
   }
 }
@@ -218,7 +216,8 @@ span {
 
 @media only screen {
   #skills-h3,
-  .biopic {
+  .biopic,
+  img {
     display: block;
   }
 }

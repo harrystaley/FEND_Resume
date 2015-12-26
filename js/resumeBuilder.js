@@ -86,16 +86,14 @@ var education = {
   ]
 };
 
-// TODO: fill out project information and add images
-
 // projects JSON
 var projects = {
   "project" : [
     {
-      "title" : "[project 1 title]",
-      "dates" : "[project 1 dates]",
-      "description" : "[project 1 description]",
-      "images" : "https://placekitten.com/200/200?image=1"
+      "title" : "Online Portfolio",
+      "dates" : "Dec 2015",
+      "description" : "Online Portfolio for my Udacity Projects",
+      "images" : "images/Online_Portfolio_Screenshot.png"
     }
   ]
 };
@@ -127,7 +125,7 @@ var work = {
   ]
 };
 
-// MAIN CODE BLOCK
+// MAIN CODE
 
 // add a button to execute the internationalize function on the main page
 $("#main").append(internationalizeButton);
@@ -139,9 +137,6 @@ displayProjects();
 displayMap();
 displayEducation();
 displayFooter();
-
-// add a google map to my resume
-
 
 // FUNCTION DEFINITIONS
 
@@ -201,8 +196,6 @@ function displayProjects() {
     )
   };
 }
-
-// TODO: add projects to my resume
 
 // this function displays the data contained in the educaiton JSON
 function displayEducation() {
