@@ -103,7 +103,7 @@ a {
 
 #skills-h3 {
   color: #f5ae23;
-  display: none;
+  display: block;
 }
 
 .orange {
@@ -152,8 +152,7 @@ ul {
 
 .biopic {
   float: left;
-  width: 200px;
-  display: none;
+  display: block;
   border: 1px solid white;
     -webkit-border-radius: 2.5%;
     -moz-border-radius: 2.5%;
@@ -161,6 +160,7 @@ ul {
 }
 
 img {
+  display: block;
   margin: 5px;
   border: 1px solid white;
     -webkit-border-radius: 2.5%;
@@ -182,6 +182,10 @@ span {
   #lets-connect {
     margin-top: 5%;
   }
+  .biopic,
+  img {
+    width: 200px;
+  }
 }
 
 @media only screen and (max-width:900px) {
@@ -197,6 +201,7 @@ span {
   }
   .biopic,
   img {
+
     width: 150px;
   }
 }
@@ -218,6 +223,7 @@ span {
   #skills-h3,
   .biopic,
   img {
+    width: 200px;
     display: block;
   }
 }

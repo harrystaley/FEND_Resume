@@ -144,11 +144,17 @@ displayFooter();
 function displayHeader() {
   if (bio !== null) { 
     // add all of the main items to the header
-    $("#header").append(
+    $("#headerInfo").prepend(
       HTMLheaderName.replace("%data%", bio.name),
       HTMLheaderRole.replace("%data%", bio.role),
-      HTMLbioPic.replace("%data%", bio.bioPic),
-      HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage),
+      HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage)
+    );
+
+    $("#profilePic").append(
+      HTMLbioPic.replace("%data%", bio.bioPic)
+    );
+
+    $("#header").append(
       HTMLskillsStart
     );
 
@@ -161,11 +167,11 @@ function displayHeader() {
 
     // adds the contact list to the header
     $("#topContacts").append(
+      HTMLlocation.replace("%data%", bio.contacts.location),
       HTMLmobile.replace("%data%", bio.contacts.mobile),
       HTMLemail.replace("%data%", bio.contacts.email),
       HTMLgithub.replace("%data%", bio.contacts.github),
-      HTMLlinkedIn.replace("%data%", bio.contacts.LinkedIn),
-      HTMLworkLocation.replace("%data%", bio.contacts.location)
+      HTMLlinkedIn.replace("%data%", bio.contacts.LinkedIn)
     );
   }
 }
@@ -235,7 +241,8 @@ function displayFooter() {
   $("#footerContacts").append(
     HTMLmobile.replace("%data%", bio.contacts.mobile),
     HTMLemail.replace("%data%", bio.contacts.email),
-    HTMLgithub.replace("%data%", bio.contacts.github)
+    HTMLgithub.replace("%data%", bio.contacts.github),
+    HTMLlinkedIn.replace("%data%", bio.contacts.LinkedIn)
   );
 }
 
