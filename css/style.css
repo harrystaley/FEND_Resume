@@ -154,9 +154,9 @@ ul {
   float: left;
   display: block;
   border: 1px solid white;
-    -webkit-border-radius: 2.5%;
-    -moz-border-radius: 2.5%;
-    border-radius: 2.5%;
+  -webkit-border-radius: 2.5%;
+  -moz-border-radius: 2.5%;
+  border-radius: 2.5%;
 }
 
 img {

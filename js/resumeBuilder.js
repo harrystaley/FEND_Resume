@@ -14,8 +14,8 @@ var bio = {
     "location" : "San Antonio, TX",
     "LinkedIn" : "harrystaley"
 	},
-  "welcomeMessage" : "Welcome to my online resume.",
-	"skills" : ["VBA", "HTML 5", "CSS 3", "Computer Programming", "Basic Command LIne Linux", "SAP Web Intelligence", "Advanced Excel"],
+  "welcomeMessage" : "Empowering people through technology.",
+	"skills" : ["VBA", "HTML 5", "CSS 3","JSON","jQuery","Java Script", "Computer Programming", "Basic Command LIne Linux", "SAP Web Intelligence", "Advanced Excel"],
 	"bioPic" : "images/TBHF_Photo.jpg"
 };
 

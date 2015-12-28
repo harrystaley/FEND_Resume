@@ -28,12 +28,10 @@
       <header>
         <div id="header" class="center-content clear-fix dark-blue">
           <div class="row">
-            <div class="col-md-12">
-              <ul id="topContacts" class="flex-box"></ul>
-            </div>
+            <ul id="topContacts" class="flex-box col-md-12"></ul>
           </div>
           <div class="row">
-            <div id="profilePic" class="img-responsive col-md-3">
+            <div id="profilePic" class="col-md-3">
               
             </div>
             <div id="headerInfo" class="col-md-9">
@@ -46,13 +44,14 @@
       <main>
         <!-- This section displays my work experience -->
         <div style="clear: both;"></div>
-        <div id="workExperience" class="gray row">
-          <div class="col-md-12">
+        <div class="row">
+          <!-- This section displays my work experience -->
+          <div id="workExperience" class="gray col-md-12">
             <h2>Work Experience</h2>
           </div>
         </div>
         <div class="row">
-          <!-- This section displays projects taht I have worked on -->
+          <!-- This section displays projects that I have worked on -->
           <div id="projects" class="col-md-12">
             <h2>Projects</h2>
           </div>
@@ -67,9 +66,7 @@
         <!-- This is the section of the resume taht displays the google map. -->
         <div class="row">
           <div id="mapDiv" class="col-md-12">
-            <div>
-              <h2>Where I've Studied and Worked</h2>
-            </div>
+            <h2>Where I've Studied and Worked</h2>
           </div>
         </div>
       </main>
@@ -84,29 +81,15 @@
       </footer>
     </div>
 
+    <!-- JAVASCRIPT CALLS -->
 
-    <!--
-    jQuery is a common JavaScript library for reading and making changes to the
-    Document Object Model (DOM). The DOM is a tree that contains information
-    about what is actually visible on a website.
-
-    While HTML is a static document, the browser converts HTML to the
-    DOM and the DOM can change. In fact, JavaScript's power comes from
-    its ability to manipulate the DOM, which is essentially a JavaScript
-    object. When JavaScript makes something interesting happen on a
-    website, it's likely the action happened because JavaScript changed
-    the DOM. jQuery is fast and easy to use, but it doesn't do anything
-    you can't accomplish with vanilla (regular) JavaScript.
-    -->
+    <!-- Load jquery -->
     <script src="js/jquery-1.11.3.min.js"></script>
 
-    <!-- More on helper.js in the class -->
+    <!-- load helper file to add in other needed HTML elements for the resume -->
     <script src="js/helper.js"></script>
 
-    <!--
-    Uncomment the <script> tag below when you're ready to add an interactive
-    Google Map to your resume!
-    -->
+    <!-- call google maps javascript api -->
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
     <!-- This is the file where the resume information is stored in JSONS and where the functions to add the different page elements to be displayed. -->
