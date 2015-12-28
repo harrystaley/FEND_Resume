@@ -11,8 +11,8 @@ h3,
 h4,
 h5,
 h6 {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   font-family: "ubuntu", sans-serif;
 }
 
@@ -59,10 +59,8 @@ h2,
 h3,
 h4,
 h5 {
-  padding:10px 5%;
-
+  padding: 10px 5%;
 }
-
 
 .date-text {
   font-style: italic;
@@ -78,7 +76,6 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -122,7 +119,7 @@ a {
 .gray {
   background-color: #f3f3f3;
   padding-bottom: 10px;
-  clear:both;
+  clear: both;
 }
 
 .dark-gray {
@@ -163,9 +160,9 @@ img {
   display: block;
   margin: 5px;
   border: 1px solid white;
-    -webkit-border-radius: 2.5%;
-    -moz-border-radius: 2.5%;
-    border-radius: 2.5%;
+  -webkit-border-radius: 2.5%;
+  -moz-border-radius: 2.5%;
+  border-radius: 2.5%;
 }
 
 span {
@@ -182,34 +179,34 @@ span {
   #lets-connect {
     margin-top: 5%;
   }
+
   .biopic,
   img {
     width: 200px;
-  }
+  };
 }
 
 @media only screen and (max-width:900px) {
   .biopic,
   img {
     width: 175px;
-  }
+  };
 }
 
 @media only screen and (max-width: 750px) {
   #lets-connect {
     margin-top: 10%;
   }
+
   .biopic,
   img {
-
     width: 150px;
-  }
+  };
 }
 
 #map {
   display: block;
   height: 100%;
-
 }
 
 #mapDiv {
@@ -218,12 +215,11 @@ span {
   padding-bottom: 5%;
 }
 
-
 @media only screen {
   #skills-h3,
   .biopic,
   img {
     width: 200px;
     display: block;
-  }
+  };
 }

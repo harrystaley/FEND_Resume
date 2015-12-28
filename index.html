@@ -1,123 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- This tells the browser how to read the document. -->
-    <meta charset="utf-8">
 
-    <!-- Tells the browser what the title of this page should be. -->
-    <title>The Resume of Harry Staley</title>
+<head>
+  <!-- This tells the browser how to read the document. -->
+  <meta charset="utf-8">
 
-    <!-- Load the boot strap framework stylesheet -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Tells the browser what the title of this page should be. -->
+  <title>The Resume of Harry Staley</title>
 
-    <!-- Load the page styles. -->
-    <link href="css/style.css" rel="stylesheet">
+  <!-- Load the boot strap framework stylesheet -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <!-- stylesheet for a few google fonts. -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700">
-  
-    <!-- normalize CSS pixels with device pixels for scalability -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <div id="main" class="container">
-      
-      <!--
+  <!-- Load the page styles. -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- stylesheet for a few google fonts. -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700">
+
+  <!-- normalize CSS pixels with device pixels for scalability -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div id="main" class="container">
+
+    <!--
       Everything from here to the <script> tag below is the skeleton of my resume website. The code contained in the file titled resumeBuilder.js adds information to each of the sections of the resume below. You can pretty easily figure out what each section will display by looking at the id or at what's written between the <h2> tags, but I have also commented on each section for your convenience
       -->
-      <header>
-        <div id="header" class="center-content clear-fix dark-blue">
-          <div class="row">
-            <ul id="topContacts" class="flex-box col-md-12"></ul>
+    <header>
+      <div id="header" class="center-content clear-fix dark-blue">
+        <div class="row">
+          <ul id="topContacts" class="flex-box col-md-12"></ul>
+        </div>
+        <div class="row">
+          <div id="profilePic" class="col-md-3">
+
           </div>
-          <div class="row">
-            <div id="profilePic" class="col-md-3">
-              
-            </div>
-            <div id="headerInfo" class="col-md-9">
-              
-            </div>
+          <div id="headerInfo" class="col-md-9">
+
           </div>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <main>
+    <main>
+      <!-- This section displays my work experience -->
+      <div style="clear: both;"></div>
+      <div class="row">
         <!-- This section displays my work experience -->
-        <div style="clear: both;"></div>
-        <div class="row">
-          <!-- This section displays my work experience -->
-          <div id="workExperience" class="gray col-md-12">
-            <h2>Work Experience</h2>
-          </div>
+        <div id="workExperience" class="gray col-md-12">
+          <h2>Work Experience</h2>
         </div>
-        <div class="row">
-          <!-- This section displays projects that I have worked on -->
-          <div id="projects" class="col-md-12">
-            <h2>Projects</h2>
-          </div>
+      </div>
+      <div class="row">
+        <!-- This section displays projects that I have worked on -->
+        <div id="projects" class="col-md-12">
+          <h2>Projects</h2>
         </div>
-        <div class="row">
-          <!-- This section contains my education -->
-          <div id="education" class="gray col-md-12">
-            <h2>Education</h2>
-          </div>
+      </div>
+      <div class="row">
+        <!-- This section contains my education -->
+        <div id="education" class="gray col-md-12">
+          <h2>Education</h2>
         </div>
+      </div>
 
-        <!-- This is the section of the resume taht displays the google map. -->
-        <div class="row">
-          <div id="mapDiv" class="col-md-12">
-            <h2>Where I've Studied and Worked</h2>
-          </div>
+      <!-- This is the section of the resume taht displays the google map. -->
+      <div class="row">
+        <div id="mapDiv" class="col-md-12">
+          <h2>Where I've Studied and Worked</h2>
         </div>
-      </main>
-      
-      <footer>
-        <div class="row">
-          <div id="lets-connect" class="dark-blue col-md-12">
-            <h2 class="orange center-text">Let's Connect</h2>
-            <ul id="footerContacts" class="flex-box"></ul>
-          </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="row">
+        <div id="lets-connect" class="dark-blue col-md-12">
+          <h2 class="orange center-text">Let's Connect</h2>
+          <ul id="footerContacts" class="flex-box"></ul>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
+  </div>
 
-    <!-- JAVASCRIPT CALLS -->
+  <!-- JAVASCRIPT CALLS -->
 
-    <!-- Load jquery -->
-    <script src="js/jquery-1.11.3.min.js"></script>
+  <!-- Load jquery -->
+  <script src="js/jquery-1.11.3.min.js"></script>
 
-    <!-- load helper file to add in other needed HTML elements for the resume -->
-    <script src="js/helper.js"></script>
+  <!-- load helper file to add in other needed HTML elements for the resume -->
+  <script src="js/helper.js"></script>
 
-    <!-- call google maps javascript api -->
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <!-- call google maps javascript api -->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
-    <!-- This is the file where the resume information is stored in JSONS and where the functions to add the different page elements to be displayed. -->
-    <script src="js/resumeBuilder.js"></script>
+  <!-- This is the file where the resume information is stored in JSONS and where the functions to add the different page elements to be displayed. -->
+  <script src="js/resumeBuilder.js"></script>
 
-    <!-- The below java script hides each section of they are not filled with content. -->
-    <script type="text/javascript">
-      if(document.getElementsByClassName('flex-item').length === 0) {
-        document.getElementById('topContacts').style.display = 'none';
-      }
-      if(document.getElementsByTagName('h1').length === 0) {
-        document.getElementById('header').style.display = 'none';
-      }
-      if(document.getElementsByClassName('work-entry').length === 0) {
-        document.getElementById('workExperience').style.display = 'none';
-      }
-      if(document.getElementsByClassName('project-entry').length === 0) {
-        document.getElementById('projects').style.display = 'none';
-      }
-      if(document.getElementsByClassName('education-entry').length === 0) {
-        document.getElementById('education').style.display = 'none';
-      }
-      if(document.getElementsByClassName('flex-item').length === 0) {
-        document.getElementById('lets-connect').style.display = 'none';
-      }
-      if(document.getElementById('map') === null) {
-        document.getElementById('mapDiv').style.display = 'none';
-      }
-    </script>
-  </body>
+  <!-- The below java script hides each section of they are not filled with content. -->
+  <script type="text/javascript">
+    if (document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('topContacts').style.display = 'none';
+    }
+    if (document.getElementsByTagName('h1').length === 0) {
+      document.getElementById('header').style.display = 'none';
+    }
+    if (document.getElementsByClassName('work-entry').length === 0) {
+      document.getElementById('workExperience').style.display = 'none';
+    }
+    if (document.getElementsByClassName('project-entry').length === 0) {
+      document.getElementById('projects').style.display = 'none';
+    }
+    if (document.getElementsByClassName('education-entry').length === 0) {
+      document.getElementById('education').style.display = 'none';
+    }
+    if (document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('lets-connect').style.display = 'none';
+    }
+    if (document.getElementById('map') === null) {
+      document.getElementById('mapDiv').style.display = 'none';
+    }
+  </script>
+</body>
+
 </html>

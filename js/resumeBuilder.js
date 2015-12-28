@@ -156,10 +156,10 @@ function displayHeader() {
     );
 
     // iterate through the skills adding each of them to the header
-    for (var i in bio.skills) {
+    for (var skill in bio.skills) {
       $("#skills").append(
-        HTMLskills.replace("%data%", bio.skills[i])
-      );
+        HTMLskills.replace("%data%", bio.skills[skill])
+      )
     };
 
     // adds the contact list to the header
@@ -175,55 +175,55 @@ function displayHeader() {
 
 // this functions displays the data contained in the work JSON
 function displayWork() {
-  for (var i in work.jobs) {
+  for (var job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
     $(".work-entry:last").append(
-      HTMLworkEmployer.replace("%data%", work.jobs[i].employer),
-      HTMLworkTitle.replace("%data%", work.jobs[i].position),
-      HTMLworkLocation.replace("%data%", work.jobs[i].location),
-      HTMLworkDates.replace("%data%", work.jobs[i].dates),
-      HTMLworkDescription.replace("%data%", work.jobs[i].description)
-    );
+      HTMLworkEmployer.replace("%data%", work.jobs[job].employer),
+      HTMLworkTitle.replace("%data%", work.jobs[job].position),
+      HTMLworkLocation.replace("%data%", work.jobs[job].location),
+      HTMLworkDates.replace("%data%", work.jobs[job].dates),
+      HTMLworkDescription.replace("%data%", work.jobs[job].description)
+    )
   };
 }
 
 // this function displays the data contained in the project JSON
 function displayProjects() {
-  for (var i in projects.project) {
+  for (var proj in projects.project) {
     $("#projects").append(HTMLprojectStart);
     $(".project-entry:last").append(
-      HTMLprojectTitle.replace("%data%", projects.project[i].title),
-      HTMLprojectDates.replace("%data%", projects.project[i].dates),
-      HTMLprojectDescription.replace("%data%", projects.project[i].description),
-      HTMLprojectImage.replace("%data%", projects.project[i].images)
-    )
+      HTMLprojectTitle.replace("%data%", projects.project[proj].title),
+      HTMLprojectDates.replace("%data%", projects.project[proj].dates),
+      HTMLprojectDescription.replace("%data%", projects.project[proj].description),
+      HTMLprojectImage.replace("%data%", projects.project[proj].images)
+    );
   };
 }
 
 // this function displays the data contained in the educaiton JSON
 function displayEducation() {
   // append schools to resume
-  for (var i in education.schools) {
+  for (var school in education.schools) {
     $("#education").append(HTMLschoolStart);
     $(".education-entry:last").append(
-      HTMLschoolName.replace("%data%", education.schools[i].name),
-      HTMLschoolDegree.replace("%data%", education.schools[i].degrees),
-      HTMLschoolDates.replace("%data%", education.schools[i].dates),
-      HTMLschoolLocation.replace("%data%", education.schools[i].location),
-      HTMLschoolMajor.replace("%data%", education.schools[i].majors)
+      HTMLschoolName.replace("%data%", education.schools[school].name),
+      HTMLschoolDegree.replace("%data%", education.schools[school].degrees),
+      HTMLschoolDates.replace("%data%", education.schools[school].dates),
+      HTMLschoolLocation.replace("%data%", education.schools[school].location),
+      HTMLschoolMajor.replace("%data%", education.schools[school].majors)
     );
-  };
+  }
 
   // add online classes section
   $(".education-entry:last").append(HTMLonlineClasses);
 
   // append online classes to resume
-  for (var i in education.onlineCourses) {
+  for (var course in education.onlineCourses) {
     $(".education-entry:last").append(
-      HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title),
-      HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school),
-      HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates),
-      HTMLonlineURL.replace("%data%", education.onlineCourses[i].url)
+      HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title),
+      HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school),
+      HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates),
+      HTMLonlineURL.replace("%data%", education.onlineCourses[course].url)
     );
   };
 }
@@ -245,9 +245,9 @@ function displayFooter() {
 
 // this function internationalizes the name
 function inName(name) {
-  var name = name.trim().split(" ");
-  console.log(name);
-  name[1] = name[1].toUpperCase();
-  name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
-  return name[0] + " " + name[1];
+  var newName = name.trim().split(" ");
+  console.log(newName);
+  newName[1] = newName[1].toUpperCase();
+  newName[0] = newName[0].slice(0,1).toUpperCase() + newName[0].slice(1).toLowerCase();
+  return newName[0] + " " + newName[1];
 }
