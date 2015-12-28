@@ -144,18 +144,15 @@ displayFooter();
 function displayHeader() {
   if (bio !== null) { 
     // add all of the main items to the header
-    $("#headerInfo").prepend(
+    $("#headerInfo").append(
       HTMLheaderName.replace("%data%", bio.name),
       HTMLheaderRole.replace("%data%", bio.role),
-      HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage)
+      HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage),
+      HTMLskillsStart
     );
 
     $("#profilePic").append(
       HTMLbioPic.replace("%data%", bio.bioPic)
-    );
-
-    $("#header").append(
-      HTMLskillsStart
     );
 
     // iterate through the skills adding each of them to the header
