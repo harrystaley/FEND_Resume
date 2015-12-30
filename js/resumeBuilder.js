@@ -113,7 +113,7 @@ var work = {
 // MAIN CODE
 
 // add a button to execute the internationalize function on the main page
-$("#main").append(internationalizeButton);
+$("#rightNav").append(internationalizeButton);
 
 // display each of the sections of the resume
 displayWork();
