@@ -1,7 +1,7 @@
 /*
 This file is where the main HTML elements are built that fill in via Java Script
 */
-var HTMLheaderName = '<h1 id="name" class="text-center">%data%</h1>';
+var HTMLheaderName = '<h1 id="name" class="text-center">%data%</h1><br>';
 var HTMLheaderRole = '<span class="white-text text-center">%data%</span><hr>';
 
 // add this generic contact to the function that appends other contact information to the header to get a generic contact
@@ -45,20 +45,10 @@ var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
-
-var internationalizeButton = '<button class="btn navbar-btn"><span class="glyphicon glyphicon-globe"></span>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
 
-/*
-internationalize function
-*/
-$(document).ready(function() {
-  $('button').click(function() {
-    var iName = inName(bio.name) || function() {};
-    $('#name').html(iName);
-  });
-});
+
 
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
@@ -78,8 +68,6 @@ $(document).click(function(loc) {
   var y = loc.pageY;
   logClicks(x, y);
 });
-
-
 
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.

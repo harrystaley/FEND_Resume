@@ -110,11 +110,6 @@ var work = {
   "display": "displayWork()"
 };
 
-// MAIN CODE
-
-// add a button to execute the internationalize function on the main page
-$("#rightNav").append(internationalizeButton);
-
 // display each of the sections of the resume
 displayWork();
 displayHeader();
@@ -230,12 +225,3 @@ function displayFooter() {
     HTMLlinkedIn.replace("%data%", bio.contacts.LinkedIn)
   );
 } // end function displayFooter
-
-// this function internationalizes the name
-function inName(name) {
-  var newName = name.trim().split(" ");
-  console.log(newName);
-  newName[1] = newName[1].toUpperCase();
-  newName[0] = newName[0].slice(0, 1).toUpperCase() + newName[0].slice(1).toLowerCase();
-  return newName[0] + " " + newName[1];
-} // end function inName

@@ -16,6 +16,11 @@ h6 {
   font-family: "ubuntu", sans-serif;
 }
 
+/* padding for top fixed navbar */
+body {
+  padding-top: 70px;
+}
+
 .clear-fix {
   overflow: auto;
 }
@@ -165,6 +170,19 @@ span {
 
 #lets-connect {
   text-align: center;
+}
+
+/* custom navbar button to match inverse style in bootstrap navbar */
+
+.navbar-btn {
+  background-color: #222;
+  border-color: #333;
+  color: #999;
+}
+
+.navbar-btn:hover {
+  color: #fff;
+  background-color: #333;
 }
 
 /* Media queries to handle various device widths */
