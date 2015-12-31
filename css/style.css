@@ -157,8 +157,9 @@ ul {
 }
 
 img {
+  float: left;
   display: block;
-  margin: 5px;
+  margin: 10px;
   -webkit-border-radius: 2.5%;
   -moz-border-radius: 2.5%;
   border-radius: 2.5%;

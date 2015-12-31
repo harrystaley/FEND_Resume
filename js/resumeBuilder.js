@@ -4,7 +4,7 @@
 // BIO INFORMATION JSON
 var bio = {
   'name': 'Harry Staley',
-  'role': 'Web Developer and Data Analyst',
+  'role': 'Systems Analyst',
   'contacts': {
     'mobile': '330-718-1876',
     'email': 'staleyh@gmail.com',
@@ -182,10 +182,10 @@ projects.display = function() {
     for (var proj = 0; proj < projects.project.length; proj++) {
       $('#projects').append(HTMLprojectStart);
       $('.project-entry:last').append(
+        HTMLprojectImage.replace('%data%', projects.project[proj].images),
         HTMLprojectTitle.replace('%data%', projects.project[proj].title).replace('#', projects.project[proj].url),
         HTMLprojectDates.replace('%data%', projects.project[proj].dates),
-        HTMLprojectDescription.replace('%data%', projects.project[proj].description),
-        HTMLprojectImage.replace('%data%', projects.project[proj].images)
+        HTMLprojectDescription.replace('%data%', projects.project[proj].description)
       );
     }
   } // end function displayProjects
