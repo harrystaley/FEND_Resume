@@ -8,6 +8,7 @@ var bio = {
   'contacts': {
     'mobile': '330-718-1876',
     'email': 'staleyh@gmail.com',
+    'twitter': '',
     'github': 'maogm316',
     'location': 'San Antonio, TX',
     'linkedin': 'harrystaley'
@@ -94,21 +95,21 @@ var projects = {
 // WORK EXPERIENCE JSON
 var work = {
   'jobs': [{
-    'position': 'Procurement Systems Analyst',
+    'title': 'Procurement Systems Analyst',
     'employer': 'U.S. Army: MIssion and Installation Contracting Command',
     'location': 'Fort Sam Houston, TX',
     'dates': '2011 - Present',
     'description': 'Anylize data in multiple forms as well as work on software projects on an as needed basis.',
     'url': 'http://www.army.mil/micc/'
   }, {
-    'position': 'Data Analyst',
+    'title': 'Data Analyst',
     'employer': 'Scholastic Inc.',
     'location': 'New York, NY',
     'dates': '2009 - 2011',
     'description': 'Anylize data in multiple forms as well as work on software projects on an as needed basis.',
     'url': 'http://www.scholastic.com/home/'
   }, {
-    'position': 'Laptop Support Technician',
+    'title': 'Laptop Support Technician',
     'employer': 'Teletech',
     'location': 'Springfield, MO',
     'dates': '2008 - 2009',
@@ -168,7 +169,7 @@ work.display = function() {
       $('#workExperience').append(HTMLworkStart);
       $('.work-entry:last').append(
         HTMLworkEmployer.replace('%data%', work.jobs[job].employer).replace('#', work.jobs[job].url) +
-        HTMLworkTitle.replace('%data%', work.jobs[job].position),
+        HTMLworkTitle.replace('%data%', work.jobs[job].title),
         HTMLworkLocation.replace('%data%', work.jobs[job].location),
         HTMLworkDates.replace('%data%', work.jobs[job].dates),
         HTMLworkDescription.replace('%data%', work.jobs[job].description)
