@@ -2,28 +2,30 @@
 /* This javascript file contains elements of my resume */
 // VARIABLE DECLARATIONS
 // BIO INFORMATION JSON
-var bio;
-$.ajax('js/data/bio.json', function(data) {
+var bio = $.ajax('js/data/bio.json', function(data) {
   bio = data;
-  console.log(bio);
+  alert(bio);
 });
 
 // EDUCATION JSON
 var education;
 $.getJSON('js/data/education.json', function(data) {
   education = data;
+  alert(education);
 });
 
 // PROJECTS JSON
 var projects;
 $.getJSON('js/data/projects.json', function(data) {
   projects = data;
+  alert(projects);
 });
 
 // WORK EXPERIENCE JSON
 var work;
 $.getJSON('js/data/work.json', function(data) {
   work = data;
+  alert(work);
 });
 
 // FUNCTION DEFINITIONS
