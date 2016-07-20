@@ -1,0 +1,25 @@
+{
+  "jobs": [{
+    "title": "Procurement Systems Analyst",
+    "employer": "U.S. Army: MIssion and Installation Contracting Command",
+    "location": "Fort Sam Houston, TX",
+    "dates": "2011 - Present",
+    "description": "Anylize data in multiple forms as well as work on software projects on an as needed basis.",
+    "url": "http://www.army.mil/micc/"
+  }, {
+    "title": "Data Analyst",
+    "employer": "Scholastic Inc.",
+    "location": "New York, NY",
+    "dates": "2009 - 2011",
+    "description": "Anylize data in multiple forms as well as work on software projects on an as needed basis.",
+    "url": "http://www.scholastic.com/home/"
+  }, {
+    "title": "Laptop Support Technician",
+    "employer": "Teletech",
+    "location": "Springfield, MO",
+    "dates": "2008 - 2009",
+    "description": "Suport HP customers with laptop suport issues while selling products to aleviate future issues.",
+    "url": "http://www.teletech.com/"
+  }],
+  "display": ""
+}

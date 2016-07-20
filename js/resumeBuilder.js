@@ -2,122 +2,31 @@
 /* This javascript file contains elements of my resume */
 // VARIABLE DECLARATIONS
 // BIO INFORMATION JSON
-var bio = {
-  'name': 'Harry Staley',
-  'role': 'Systems Analyst',
-  'contacts': {
-    'mobile': '330-718-1876',
-    'email': 'staleyh@gmail.com',
-    'twitter': '',
-    'github': 'maogm316',
-    'location': 'San Antonio, TX',
-    'linkedin': 'harrystaley'
-  },
-  'welcomeMessage': 'Empowering people through technology.',
-  'skills': ['VBA', 'HTML 5', 'CSS 3', 'JSON', 'jQuery', 'Java Script', 'Computer Programming', 'Basic Command LIne Linux', 'SAP Web Intelligence', 'Advanced Excel'],
-  'biopic': 'images/TBHF_Photo.jpg',
-  'display': ''
-};
+var bio;
+$.ajax({
+  url: "data/bio.json",
+  dataType: "jsonp"
+}).done(function(data) {
+  bio = data;
+});
 
 // EDUCATION JSON
-var education = {
-  'schools': [{
-    'name': 'Central Bible College',
-    'location': 'Springfield, MO',
-    'degree': 'B.A., A.A.',
-    'majors': ['Youth Minestry/Bible', 'Deaf Minestry'],
-    'dates': '1997 - 2007',
-    'url': 'http://www.cbcag.edu/'
-  }, {
-    'name': 'Ozarks Technical Community College',
-    'location': 'Springfield, MO',
-    'degree': 'A.A.S., Certificate',
-    'majors': ['Business and Marketing', 'Computer Information Technology'],
-    'dates': '2005 - 2009',
-    'url': 'http://www.otc.edu/'
-  }, {
-    'name': 'St. Phillips College',
-    'location': 'San Antonio, TX',
-    'degree': 'A.S.',
-    'majors': ['Computer Science', 'Mathematics'],
-    'dates': '2014 - Present',
-    'url': 'https://www.alamo.edu/spc/'
-  }, {
-    'name': 'Texas A&M San Antonio',
-    'location': 'San Antonio, TX',
-    'degree': 'B.S.',
-    'majors': ['Computer Science', 'Mathematics'],
-    'dates': '2015 - Present',
-    'url': 'http://www.tamusa.edu/'
-  }],
-
-  'onlineCourses': [{
-    'title': 'Intro to HTML and CSS',
-    'school': 'Udacity',
-    'date': 'Dec 2015',
-    'url': 'https://www.udacity.com/course/intro-to-html-and-css--ud304'
-  }, {
-    'title': 'Responsive Web Ddsign Fundamentals',
-    'school': 'Udacity',
-    'date': 'Dec 2015',
-    'url': 'https://www.udacity.com/course/responsive-web-design-fundamentals--ud893'
-  }, {
-    'title': 'Responsive Images',
-    'school': 'Udacity',
-    'date': 'Dec 2015',
-    'url': 'https://www.udacity.com/course/responsive-images--ud882'
-  }, {
-    'title': 'Javascript Basics',
-    'school': 'Udacity',
-    'date': 'Dec 2015',
-    'url': 'https://www.udacity.com/course/javascript-basics--ud804'
-  }, {
-    'title': 'Intro to JQUERY',
-    'school': 'Udacity',
-    'date': 'Dec 2015',
-    'url': 'https://www.udacity.com/course/intro-to-jquery--ud245'
-  }],
-  'display': ''
-};
+var education;
+$.getJSON('data/education.json', function(data) {
+  education = data;
+});
 
 // PROJECTS JSON
-var projects = {
-  'project': [{
-    'title': 'Online Portfolio',
-    'dates': 'Dec 2015',
-    'description': 'Online Portfolio for my Udacity Projects',
-    'images': ['images/Online_Portfolio_Screenshot.png'],
-    'url': 'https://github.com/moagm316/FE_NanoDeg_P2-Resume'
-  }],
-  'display': ''
-};
+var projects;
+$.getJSON('data/projects.json', function(data) {
+  projects = data;
+});
 
 // WORK EXPERIENCE JSON
-var work = {
-  'jobs': [{
-    'title': 'Procurement Systems Analyst',
-    'employer': 'U.S. Army: MIssion and Installation Contracting Command',
-    'location': 'Fort Sam Houston, TX',
-    'dates': '2011 - Present',
-    'description': 'Anylize data in multiple forms as well as work on software projects on an as needed basis.',
-    'url': 'http://www.army.mil/micc/'
-  }, {
-    'title': 'Data Analyst',
-    'employer': 'Scholastic Inc.',
-    'location': 'New York, NY',
-    'dates': '2009 - 2011',
-    'description': 'Anylize data in multiple forms as well as work on software projects on an as needed basis.',
-    'url': 'http://www.scholastic.com/home/'
-  }, {
-    'title': 'Laptop Support Technician',
-    'employer': 'Teletech',
-    'location': 'Springfield, MO',
-    'dates': '2008 - 2009',
-    'description': 'Suport HP customers with laptop suport issues while selling products to aleviate future issues.',
-    'url': 'http://www.teletech.com/'
-  }],
-  'display': ''
-};
+var work;
+$.getJSON('data/work.json', function(data) {
+  work = data;
+});
 
 // FUNCTION DEFINITIONS
 

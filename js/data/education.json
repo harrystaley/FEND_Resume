@@ -1,0 +1,60 @@
+{
+  "schools": [{
+    "name": "Central Bible College",
+    "location": "Springfield, MO",
+    "degree": "B.A., A.A.",
+    "majors": ["Youth Minestry/Bible", "Deaf Minestry"],
+    "dates": "1997 - 2007",
+    "url": "http://www.cbcag.edu/"
+  }, {
+    "name": "Ozarks Technical Community College",
+    "location": "Springfield, MO",
+    "degree": "A.A.S., Certificate",
+    "majors": ["Business and Marketing", "Computer Information Technology"],
+    "dates": "2005 - 2009",
+    "url": "http://www.otc.edu/"
+  }, {
+    "name": "St. Phillips College",
+    "location": "San Antonio, TX",
+    "degree": "A.S.",
+    "majors": ["Computer Science", "Mathematics"],
+    "dates": "2014 - Present",
+    "url": "https://www.alamo.edu/spc/"
+  }, {
+    "name": "Texas A&M San Antonio",
+    "location": "San Antonio, TX",
+    "degree": "B.S.",
+    "majors": ["Computer Science", "Mathematics"],
+    "dates": "2015 - Present",
+    "url": "http://www.tamusa.edu/"
+  }],
+
+  "onlineCourses": [{
+    "title": "Intro to HTML and CSS",
+    "school": "Udacity",
+    "date": "Dec 2015",
+    "url": "https://www.udacity.com/course/intro-to-html-and-css--ud304"
+  }, {
+    "title": "Responsive Web Ddsign Fundamentals",
+    "school": "Udacity",
+    "date": "Dec 2015",
+    "url": "https://www.udacity.com/course/responsive-web-design-fundamentals--ud893"
+  }, {
+    "title": "Responsive Images",
+    "school": "Udacity",
+    "date": "Dec 2015",
+    "url": "https://www.udacity.com/course/responsive-images--ud882"
+  }, {
+    "title": "Javascript Basics",
+    "school": "Udacity",
+    "date": "Dec 2015",
+    "url": "https://www.udacity.com/course/javascript-basics--ud804"
+  }, {
+    "title": "Intro to JQUERY",
+    "school": "Udacity",
+    "date": "Dec 2015",
+    "url": "https://www.udacity.com/course/intro-to-jquery--ud245"
+  }],
+  "display": ""
+}
+

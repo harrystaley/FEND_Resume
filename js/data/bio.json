@@ -1,0 +1,16 @@
+{
+  "name": "Harry Staley",
+  "role": "Systems Analyst",
+  "contacts": {
+    "mobile": "330-718-1876",
+    "email": "staleyh@gmail.com",
+    "twitter": "",
+    "github": "maogm316",
+    "location": "San Antonio, TX",
+    "linkedin": "harrystaley"
+  },
+  "welcomeMessage": "Empowering people through technology.",
+  "skills": ["VBA", "HTML 5", "CSS 3", "JSON", "jQuery", "Java Script", "Computer Programming", "Basic Command LIne Linux", "SAP Web Intelligence", "Advanced Excel"],
+  "biopic": "images/TBHF_Photo.jpg",
+  "display": ""
+}
