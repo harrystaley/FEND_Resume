@@ -3,28 +3,26 @@
 // VARIABLE DECLARATIONS
 // BIO INFORMATION JSON
 var bio;
-$.ajax({
-  url: "data/bio.json",
-  dataType: "jsonp"
-}).done(function(data) {
+$.ajax('js/data/bio.json', function(data) {
   bio = data;
+  console.log(bio);
 });
 
 // EDUCATION JSON
 var education;
-$.getJSON('data/education.json', function(data) {
+$.getJSON('js/data/education.json', function(data) {
   education = data;
 });
 
 // PROJECTS JSON
 var projects;
-$.getJSON('data/projects.json', function(data) {
+$.getJSON('js/data/projects.json', function(data) {
   projects = data;
 });
 
 // WORK EXPERIENCE JSON
 var work;
-$.getJSON('data/work.json', function(data) {
+$.getJSON('js/data/work.json', function(data) {
   work = data;
 });
 
