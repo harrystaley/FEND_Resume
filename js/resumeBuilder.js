@@ -43,7 +43,12 @@ function displayBio() {$.getJSON('js/data/bio.json', function(data) {
         HTMLlinkedin.replace('%data%', bio.contacts.linkedin)
       );
 
-  });
+  }).fail(function(e) {
+        $('#header').prepend(
+          'Bio data could not be loaded.'
+        );
+      }
+    );;
 }
 
 // EDUCATION JSON
@@ -72,7 +77,12 @@ function displayEducation() {$.getJSON('js/data/education.json', function(data) 
         HTMLonlineDates.replace('%data%', education.onlineCourses[course].date)
       );
     }
-  });
+  }).fail(function(e) {
+        $('#education').append(
+          'Education data could not be loaded.'
+        );
+      }
+    );
 }
 
 // PROJECTS JSON
@@ -87,7 +97,12 @@ function displayProjects() {$.getJSON('js/data/projects.json', function(data) {
         HTMLprojectDescription.replace('%data%', projects.project[proj].description)
       );
     }
-  });
+  }).fail(function(e) {
+        $('#projects').append(
+          'Project data could not be loaded.'
+        );
+      }
+    );
 }
 
 // WORK EXPERIENCE JSON
@@ -103,7 +118,12 @@ function displayWork() {$.getJSON('js/data/work.json', function(data) {
         HTMLworkDescription.replace('%data%', work.jobs[job].description)
       );
     }
-});
+}).fail(function(e) {
+        $('#workExperience').append(
+          'Work data could not be loaded.'
+        );
+      }
+    );
 }
 // this function calls the googleMaps API based upon the data contained in the location attributes in all JSONS
 function displayMap() {
