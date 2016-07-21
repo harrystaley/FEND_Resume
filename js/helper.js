@@ -97,9 +97,9 @@ function initializeMap() {
     disableDefaultUI: true
   };
 
-  /* 
+  /*
   For the map to be displayed, the googleMap var must be
-  appended to #mapDiv in resumeBuilder.js. 
+  appended to #mapDiv in resumeBuilder.js.
   */
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
@@ -111,21 +111,29 @@ function initializeMap() {
 
     // initializes an empty array
     var locations = [];
-
-    // adds the single location property from bio to the locations array
-    locations.push(bio.contacts.location);
+    $.getJSON('js/data/bio.json', function(data) {
+    	var bio = data;
+    	// adds the single location property from bio to the locations array
+    	locations.push(bio.contacts.location);
+    });
 
     // iterates through school locations and appends each location to
     // the locations array
-    for (var school = 0; school < education.schools.length; school++) {
-      locations.push(education.schools[school].location);
-    }
+    $.getJSON('js/data/education.json', function(data) {
+    	var education = data;
+	    for (var school = 0; school < education.schools.length; school++) {
+	      locations.push(education.schools[school].location);
+	    }
+	});
 
     // iterates through work locations and appends each location to
     // the locations array
-    for (var job = 0; job < work.jobs.length; job++) {
-      locations.push(work.jobs[job].location);
-    }
+    $.getJSON('js/data/work.json', function(data) {
+    	var work = data;
+	    for (var job = 0; job < work.jobs.length; job++) {
+	      locations.push(work.jobs[job].location);
+	    }
+	});
 
     return locations;
   } // end funciton locationFinder
