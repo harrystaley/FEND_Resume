@@ -111,6 +111,7 @@ function displayMap() {
   } // end funciton displayMap
 
 displayBio();
+displayEducation();
 displayProjects();
 displayWork();
 displayMap();
