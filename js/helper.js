@@ -1,5 +1,8 @@
 /*
 This file is where the main HTML elements are built that fill in via Java Script
+
+TODO: Change synchronous requests into asynchronous in the locationFinder function due to the synchronous requests being depricated.
+
 */
 var HTMLheaderName = '<h1 id="name" class="text-center">%data%</h1><br>';
 var HTMLheaderRole = '<span class="white-text text-center">%data%</span><hr>';
@@ -108,6 +111,8 @@ function initializeMap() {
   written for bio, education, and work.
   */
   function locationFinder() {
+
+  	// ASYNCHRONIOUS REQUESTS DUE TO MAP NOT RENDERING CORRECTLY
 
     // initializes an empty array
     var locations = [];
