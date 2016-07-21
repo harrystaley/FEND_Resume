@@ -111,16 +111,26 @@ function initializeMap() {
 
     // initializes an empty array
     var locations = [];
-    $.getJSON('js/data/bio.json', function(data) {
-    	var bio = data;
-    	// adds the single location property from bio to the locations array
-    	locations.push(bio.contacts.location);
+    $.ajax({
+	    url: 'js/data/bio.json',
+	    dataType: "json",
+	    async: false
+	    // success handler must be chained due to use of jsonp
+	  }).done(function(data) {
+	  		var bio = data;
+	    	// adds the single location property from bio to the locations array
+	    	locations.push(bio.contacts.location);
     });
 
     // iterates through school locations and appends each location to
     // the locations array
-    $.getJSON('js/data/education.json', function(data) {
-    	var education = data;
+    $.ajax({
+	    url: 'js/data/education.json',
+	    dataType: "json",
+	    async: false
+	    // success handler must be chained due to use of jsonp
+	  }).done(function(data) {
+	  	var education = data;
 	    for (var school = 0; school < education.schools.length; school++) {
 	      locations.push(education.schools[school].location);
 	    }
@@ -128,13 +138,17 @@ function initializeMap() {
 
     // iterates through work locations and appends each location to
     // the locations array
-    $.getJSON('js/data/work.json', function(data) {
-    	var work = data;
+    $.ajax({
+	    url: 'js/data/work.json',
+	    dataType: "json",
+	    async: false
+	    // success handler must be chained due to use of jsonp
+	  }).done(function(data) {
+	  		var work = data;
 	    for (var job = 0; job < work.jobs.length; job++) {
 	      locations.push(work.jobs[job].location);
 	    }
 	});
-
     return locations;
   } // end funciton locationFinder
 
